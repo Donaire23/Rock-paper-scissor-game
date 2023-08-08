@@ -1,0 +1,74 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  background-color: rgb(24,38,71);
+}
+.game-container {
+  height: 765px;
+  width: 100%;
+  margin-top: 80px;
+  display: flex;
+  justify-content: space-around;
+  overflow: hidden;
+}
+.player-choices, .ai-choices {
+  display: flex;
+  flex-direction: column;
+}
+.player-choices button:hover {
+  cursor: pointer;
+}
+.player-choices button, .ai-choices button {
+  font-size: 80px;
+  border: none;
+}
+.ai-container, .player-container {
+
+  text-align: center;
+  width: 210px;
+}
+#rockPaperScissor, #aiPicks {
+  font-size: 150px;
+  margin-top: 50px;
+}
+.player-text, .pScore-text, .history-text, .ai-text, .aScore-text {
+  color: white;
+}
+p {
+  color: white;
+  font-size: 50px;
+}
+.result-text {
+  color: white;
+  width: auto;
+}
+#aiScore, #playerScore{
+  text-align: center;
+}
+#rockPaperScissor, #aiPicks {
+  text-align: center;
+}
+#resetGame {
+  text-align: center;
+  margin: 20px 0px 0px 50px;
+}
+#resetGame button {
+  border: 1px solid white;
+  padding: 10px 15px 10px 15px;
+  font-size: 20px;
+  color: white;
+  border-radius: 5px;
+}
+#resetGame button:hover {
+  cursor: pointer;
+}
+.match-history {
+  width: auto;
+}
+.history-text {
+  text-align: center;
+}
+#whoWin {
+  text-align: center;
+}

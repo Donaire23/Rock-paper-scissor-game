@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="style.css" rel="stylesheet">
+  <title>Rock Paper Scissor Game</title>
+</head>
+<body>
+
+
+ 
+ 
+  <div class="container">
+    
+    <div class="game-container">
+      
+      <div class="player-container">
+          <h1 class="player-text">Player Choice</h1>
+
+          <div class="player-choices">
+            <button id="pRockBtn" class="player-rock">👊</button>
+            <button id="pPaperBtn" class="paper-rock">✋</button>
+            <button id="pScissorBtn" class="scissor-rock">✌</button>
+          </div>
+
+          <div id="pChoice">
+            <p id="rockPaperScissor"></p>
+          </div>
+
+      </div>
+
+    
+
+      <div class="player-score">
+        <h1 class="pScore-text">Player Score</h1>
+        <p id="playerScore"></p>
+      </div>
+
+      <div class="match-history">
+        <h1 class="history-text">Match History</h1>
+        <p id="whoWin"></p>
+
+        <p id="results" class="history-results"></p>
+
+      </div>
+
+  
+      <div class="ai-score">
+        <h1 class="aScore-text">A.I Score</h1>
+        <p id="aiScore"></p>
+      </div>
+
+      <div class="ai-container">
+        <h1 class="ai-text">A.I Choice</h1>
+
+        <div class="ai-choices">
+          <button id="aRockBtn" class="ai-rock">👊</button>
+          <button id="aPaperBtn" class="ai-paper">✋</button>
+          <button id="aScissorBtn" class="ai-scissor">✌</button>
+        </div>
+
+        <div>
+          <p id="aiPicks"></p>
+        </div>
+
+
+
+      </div>
+
+    </div>
+   
+      
+  </div>
+
+  <p id="resetGame"></p>
+
+  
+  <script src="script.js"></script>
+</body>
+</html>
