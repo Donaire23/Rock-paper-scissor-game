@@ -45,64 +45,6 @@ let aScore = 1;
 
 
 
-//Who Win 
-const Winner = () => {
-
-  const resetBtn = document.createElement("button");
-  resetBtn.innerHTML = "Reset Game";
-
-  // Reset Button
-  resetBtn.addEventListener("click", () => {
-
-    playerScore.innerHTML = ""
-    aiScore.innerHTML = ""
-    results.innerHTML = ""
-    whoWin.innerHTML = ""
-    aiPicks.innerHTML = ""
-    rockPaperScissor.innerHTML = ""
-
-
-    historyContainer = []
-
-    pScores = 1;
-    aScore = 1;
-    countHistory = 0
-  
-    pRockBtn.removeAttribute("disabled");
-    pPaperBtn.removeAttribute("disabled");
-    pScissorBtn.removeAttribute("disabled");
-
-    resetGame.removeChild(resetGame.firstElementChild)
-  })
-
-  if(countHistory == 10 && pScores > aScore) {
-    
-    pRockBtn.setAttribute("disabled", "");
-    pPaperBtn.setAttribute("disabled", "");
-    pScissorBtn.setAttribute("disabled", "");
-
-    resetGame.appendChild(resetBtn)
-    whoWin.innerHTML = "Player Win"
-
-  } else if (countHistory == 10 && aScore > pScores) {
-
-    pRockBtn.setAttribute("disabled", "");
-    pPaperBtn.setAttribute("disabled", "");
-    pScissorBtn.setAttribute("disabled", "");
- 
-    whoWin.innerHTML = "A.I Win"
-    resetGame.appendChild(resetBtn)
-
-  } else if (countHistory == 10 && aScore == pScores) {
-    pRockBtn.setAttribute("disabled", "");
-    pPaperBtn.setAttribute("disabled", "");
-    pScissorBtn.setAttribute("disabled", "");
-
-    whoWin.innerHTML = "Its a tie!"
-    resetGame.appendChild(resetBtn)
-  }
-
-}
 
 
 //Player Choices
@@ -110,8 +52,7 @@ const Winner = () => {
 //Rock Button
 pRockBtn.addEventListener("click", () => {
 
-  countHistory++
-  Winner()
+
   ai()
 
   rockPaperScissor.innerHTML = playerChoices[0]
@@ -144,8 +85,6 @@ pRockBtn.addEventListener("click", () => {
 
 pPaperBtn.addEventListener("click", () => {
 
-  countHistory++
-  Winner()
   ai()
 
   rockPaperScissor.innerHTML = playerChoices[1]
@@ -177,8 +116,7 @@ pPaperBtn.addEventListener("click", () => {
 
 pScissorBtn.addEventListener("click", () => {
 
-  countHistory++
-  Winner()
+
   ai()
 
   rockPaperScissor.innerHTML = playerChoices[2]
